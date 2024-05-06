@@ -1,0 +1,24 @@
+# NPM
+npm-debug.log*
+node_modules/
+.npm
+
+# IDEs
+.vscode/
+*.code-workspace
+
+# bundler
+esm/
+.cache
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# test coverage
+coverage/
+
+# vitest internals
+tsconfig.vitest-temp.json
+

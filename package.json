@@ -1,0 +1,83 @@
+{
+  "name": "wouter-hono",
+  "version": "0.1.0",
+  "description": "Minimalist-friendly ~1.5KB router - wouter, adapted for Hono",
+  "type": "module",
+  "keywords": [
+    "hono",
+    "router",
+    "tiny",
+    "routing",
+    "hooks",
+    "useLocation",
+    "wouter"
+  ],
+  "files": [
+    "esm",
+    "types/**/*.d.ts",
+    "types/*.d.ts"
+  ],
+  "main": "esm/index.js",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./esm/index.js"
+    },
+    "./use-browser-location": {
+      "types": "./types/use-browser-location.d.ts",
+      "default": "./esm/use-browser-location.js"
+    },
+    "./use-hash-location": {
+      "types": "./types/use-hash-location.d.ts",
+      "default": "./esm/use-hash-location.js"
+    },
+    "./memory-location": {
+      "types": "./types/memory-location.d.ts",
+      "default": "./esm/memory-location.js"
+    }
+  },
+  "types": "types/index.d.ts",
+  "typesVersions": {
+    ">=4.1": {
+      "types/index.d.ts": [
+        "types/index.d.ts"
+      ],
+      "use-browser-location": [
+        "types/use-browser-location.d.ts"
+      ],
+      "use-hash-location": [
+        "types/use-hash-location.d.ts"
+      ],
+      "memory-location": [
+        "types/memory-location.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Varun",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apvarun/wouter-hono.git"
+  },
+  "license": "Unlicense",
+  "peerDependencies": {
+    "hono": "^4.3.2"
+  },
+  "dependencies": {
+    "mitt": "^3.0.1",
+    "regexparam": "^3.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "jsdom": "^24.0.0",
+    "rollup": "^4.17.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0",
+    "wouter": "^3.1.2"
+  }
+}
