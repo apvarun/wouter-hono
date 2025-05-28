@@ -8,6 +8,7 @@ export {
 } from "hono/jsx";
 export {
   useRef,
+  useMemo,
   useLayoutEffect as useIsomorphicLayoutEffect,
   useLayoutEffect as useInsertionEffect,
   useState,
