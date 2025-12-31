@@ -1,6 +1,7 @@
 import alias from "@rollup/plugin-alias";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { defineConfig } from "rollup";
+import path from "node:path";
 
 export default defineConfig([
   {
@@ -20,7 +21,7 @@ export default defineConfig([
       nodeResolve(),
       alias({
         entries: {
-          "./react-deps.js": "./src/hono-deps.js",
+          "./react-deps.js": path.resolve("src/hono-deps.js"),
         },
       }),
     ],
